@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+</head>
+<body style="min-height: 100%; overflow-y:hidden;">
+    <section class="section-book" style="padding-top: 100px; padding-bottom: 100rem;">
+            <div class="row">
+                <div class="book">
+                    <div class="book__form">
+                      <form action="{{url_for('eda_page')}}" class="form" method="post">
+                        <div class="u-margin-bottom-small">
+                          <h2 class="heading-secondary">
+                            Enter Login Details
+                          </h2>
+                        </div>
+                        <div>
+                            <label for="name" class="heading-tertiary" style="color: red; padding-left: 2rem;">{{placeholder}}</label>
+                            <br>
+                            <br>
+                        </div>
+                        <div class="form__group">
+                          <input id="name" type="email" class="form__input" name="email" placeholder="Email address" required>
+                          <label for="name" class="form__label">Email address</label>
+                        </div>
+                        <div class="form__group">
+                          <input id="email" type="password" name="password" class="form__input" placeholder="Password" required>
+                          <label for="email" class="form__label">Password</label>
+                        </div>
+      
+                        <div class="form-group">
+                            <!-- <input type="submit" value="Discover your options" class="btn btn--white btn--animated" style="margin-left: 25%;"> -->
+                          <input class="btn btn--green" type="submit" name="button" value="Login &rarr;">
+                        </div>
+                      </form>
+                    </div>
+                </div>
+              </div>
+      </section>
+   
+</body>
+</body>
+</html>

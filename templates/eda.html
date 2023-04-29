@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href="../static/css/eda-page.css">
+    <link rel="stylesheet" href="../static/css/eda-page1.css">
+
+    <title>Indian Colleges EDA</title>
+
+</head>
+
+<body id="mybody">
+    <div class="navigation">
+        <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
+
+        <label for="navi-toggle" class="navigation__button">
+          <span class="navigation__icon">&nbsp;</span>
+        </label>
+
+        <div class="navigation__background">&nbsp;</div>
+
+        <nav class="navigation__nav">
+          <ul class="navigation__list">
+            <li class="navigation__item"><a href="#" class="navigation__link">Hi Shrirang....</a></li>
+            <li class="navigation__item"><a href="#" class="navigation__link"></a></li>
+            <li class="navigation__item"><a href="eda" class="navigation__link">Exploratory Dashboard</a></li>
+            <li class="navigation__item"><a href="data-view" class="navigation__link">Data View</a></li>
+            <li class="navigation__item"><a href="about-us" class="navigation__link">About us</a></li>
+            <li class="navigation__item"><a href="/" class="navigation__link">Logout</a></li>
+          </ul>
+        </nav>
+      </div>
+
+    <header class="header">
+        <div class="header__text-box">
+            <h1 class="heading-primary">
+                <span class="heading-primary--main">Indian Colleges</span> 
+                <br>
+                <span class="heading-primary--sub" id="heading-primary--sub">Database Overview</span>
+            </h1>
+
+            <a href="#" class="btn btn--white btn--animated js--scroll-to-features">Discover more</a>
+        </div>
+    </header>
+    <section class="section-features js--section-features">
+        <div class="u-center-text u-margin-bottom-big">
+            <h2 class="heading-secondary">
+                Database Snapshot for Indian Colleges
+            </h2>
+        </div>
+
+        <div class="row">
+            <div class="col-1-of-4">
+                <div class="feature-box">
+                    <h1 class="feature-box__icon heading-secondary-1">{{overview["Total Users"]}}</h1>
+                    <h3 class="heading-tertiary u-margin-bottom-small">Admin Count</h3>
+                    <p class="feature-box__text">
+                        Total number of admins handling the database.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-1-of-4">
+                <div class="feature-box">
+                    <h1 class="feature-box__icon heading-secondary-1">{{overview["Total Tables"]}}</h1>
+                    <h3 class="heading-tertiary u-margin-bottom-small">Total Tables</h3>
+                    <p class="feature-box__text">
+                        Total number of tables present in database.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-1-of-4">
+                <div class="feature-box">
+                    <h1 class="feature-box__icon heading-secondary-1">{{overview["Total Records"]}}</h1>
+                    <h3 class="heading-tertiary u-margin-bottom-small">Total Records</h3>
+                    <p class="feature-box__text">
+                        Count of total number of records in database.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-1-of-4">
+                <div class="feature-box">
+                    <h1 class="feature-box__icon heading-secondary-1">{{overview["Average Rating"]}}</h1>
+                    <h3 class="heading-tertiary u-margin-bottom-small">Average rating</h3>
+                    <p class="feature-box__text">
+                        Average rating for {{overview["Total Colleges"]}} colleges
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+ 
+    <section class="section-about js--section-about" style="padding:15rem 5rem;">
+        <div class="u-center-text u-margin-bottom-big">
+            <h2 class="heading-secondary">
+                Distribution of genders across {{overview["Total Colleges"]}} colleges
+            </h2>
+        </div>
+
+        <div class="row1 row-1-cr">
+            <div class="col-1-of-2">
+                <p class="paragraph">
+                    The graph on right shows the distribution of genders across {{overview["Total Colleges"]}} colleges. 
+                    We can clearly observe that there are more number of Co-ed colleges present in India.
+                </p>
+
+                <h3 class="heading-tertiary-1 u-margin-bottom-small">
+                    Co-Ed Colleges
+                </h3>
+                <p class="paragraph">
+                    There are 4658 Co-Ed colleges present which constitute 96.8% of the data.
+                </p>
+
+                <h3 class="heading-tertiary-1 u-margin-bottom-small">
+                    Female Colleges
+                </h3>
+                <p class="paragraph">
+                    There are 147 Female colleges present which constitute 3.05% of the data.
+                </p>
+
+                <h3 class="heading-tertiary-1 u-margin-bottom-small">
+                    Male Colleges
+                </h3>
+                <p class="paragraph">
+                    There are 8 Male colleges present which constitute 0.166% of the data.
+                </p>
+
+            </div>
+
+            <div class="col-1-of-2">
+                {{gender_pie_chart | safe}}
+            </div>
+        </div>
+    </section> 
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $('.js--scroll-to-features').click(function() {
+            $('html, body').animate({
+                scrollTop: $('.js--section-about').offset().top
+            }, 1500);
+        });
+    </script>
+
+    <section class="section-about-1" style="padding:5rem;">
+        <div class="u-center-text u-margin-bottom-big">
+            <h2 class="heading-secondary">
+                Distribution of Facilities offered across {{overview["Total Colleges"]}} colleges
+            </h2>
+        </div>
+
+        <div class="row1 row-1-c">
+            <div class="col-1-of-2">
+                {{facilities_count_plot | safe}}
+            </div>
+
+            <div class="col-1-of-2">
+                <p class="paragraph">
+                    The graph shows total number facilities offered for each colleges.
+                </p>
+
+                <p class="paragraph">
+                    The top 3 states reporting highest number of cases are :
+                    <ul class="paragraph" style="margin-left: 2rem; margin-top: -2.5rem;">
+                        <li>{{facilities_count_list[0]}}</li>
+                        <li>{{facilities_count_list[1]}}</li>
+                        <li>{{facilities_count_list[2]}}</li>
+                    </ul>
+                </p>
+
+                <p class="paragraph">
+                    The top 3 states reporting lowest number of cases are :
+                    <ul class="paragraph" style="margin-left: 2rem; margin-top: -2.5rem;">
+                        <li>{{facilities_count_list[-1]}}</li>
+                        <li>{{facilities_count_list[-2]}}</li>
+                        <li>{{facilities_count_list[-3]}}</li>
+                    </ul>
+                </p>
+            </div>
+            
+        </div>
+    </section>
+
+    <section class="section-about-2" style="padding:5rem 5rem;">
+        <div class="u-center-text u-margin-bottom-big">
+            <h2 class="heading-secondary">
+                Distribution of colleges across universities
+            </h2>
+        </div>
+
+        <div class="row1 row-1-cr">
+            <div class="col-1-of-2">
+                <p class="paragraph">
+                    The figure shows the top 15 universities having maximum college count.
+                </p>
+
+                <p class="paragraph">
+                    The top 5 universities containing highest number colleges are : 
+                    <ul class="paragraph" style="margin-left: 2rem; margin-top: -2.5rem;">
+                        <li>{{universities_count_list[0]}}</li>
+                        <li>{{universities_count_list[1]}}</li>
+                        <li>{{universities_count_list[2]}}</li>
+                        <li>{{universities_count_list[3]}}</li>
+                        <li>{{universities_count_list[4]}}</li>
+                    </ul>
+                </p>
+
+            </div>
+
+            <div class="col-1-of-2">
+                {{top25_universities_college_count_plot | safe}}
+            </div>
+        </div>
+    </section>
+
+    <section class="section-about-1" style="padding:5rem;">
+        <div class="u-center-text u-margin-bottom-big">
+            <h2 class="heading-secondary">
+                Distribution of Colleges across different states
+            </h2>
+        </div>
+
+        <div class="row1 row-1-c">
+            <div class="col-1-of-2">
+                {{top25_states_college_count_plot | safe}}
+            </div>
+
+            <div class="col-1-of-2">
+                <p class="paragraph">
+                    The graph shows distribution of colleges across different states.
+                </p>
+
+                <p class="paragraph">
+                    The top 3 states having highest number of colleges are :
+                    <ul class="paragraph" style="margin-left: 2rem; margin-top: -2.5rem;">
+                        <li>{{top25_states_college_count_plot_list[0]}}</li>
+                        <li>{{top25_states_college_count_plot_list[1]}}</li>
+                        <li>{{top25_states_college_count_plot_list[2]}}</li>
+                    </ul>
+                </p>
+
+                <p class="paragraph">
+                    The top 3 states having lowest number of colleges are :
+                    <ul class="paragraph" style="margin-left: 2rem; margin-top: -2.5rem;">
+                        <li>{{top25_states_college_count_plot_list[-1]}}</li>
+                        <li>{{top25_states_college_count_plot_list[-2]}}</li>
+                        <li>{{top25_states_college_count_plot_list[-3]}}</li>
+                    </ul>
+                </p>
+            </div>
+            
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="row" style="display: flex; align-items: center;">
+            <div class="col-1-of-2">
+                <div class="footer__navigation">
+                    <ul class="footer__list">
+                        <li class="footer__item"><a href="./about-us" class="footer__link js--scroll-to-live-updates">About us</a></li>
+                        <li class="footer__item"><a href="./eda" class="footer__link">EDA Dashboard</a></li>
+                        <li class="footer__item"><a href="./data-view" class="footer__link">Data View</a></li>
+                        <li class="footer__item"><a href="./" class="footer__link">Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-1-of-2">
+                <p class="footer__copyright">
+                    Developed by <a href="/about-us" class="footer__link">Shrirang Mhalgi and Manali Shelar</a> as part of <a href="#" class="footer__link">ADT Project</a>
+                    on 30<sup>th</sup> April 2023. Copyright &copy; Shrirang Mhalgi and Manali Shelar</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        $('.js--scroll-to-live-updates').click(function() {
+            $('html, body').animate({
+                scrollTop: $('.js--section-features').offset().top
+            }, 1500);
+        });
+    </script>
+</body>
+
+</html>

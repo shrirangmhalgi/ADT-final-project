@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+</head>
+<body>
+    <div class="navigation">
+        <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
+
+        <label for="navi-toggle" class="navigation__button">
+          <span class="navigation__icon">&nbsp;</span>
+        </label>
+
+        <div class="navigation__background">&nbsp;</div>
+
+        <nav class="navigation__nav">
+          <ul class="navigation__list">
+            <li class="navigation__item"><a href="#" class="navigation__link">Hi Shrirang....</a></li>
+            <li class="navigation__item"><a href="#" class="navigation__link"></a></li>
+            <li class="navigation__item"><a href="eda" class="navigation__link">Exploratory Dashboard</a></li>
+            <li class="navigation__item"><a href="data-view" class="navigation__link">Data View</a></li>
+            <li class="navigation__item"><a href="about-us" class="navigation__link">About us</a></li>
+            <li class="navigation__item"><a href="/" class="navigation__link">Logout</a></li>
+          </ul>
+        </nav>
+      </div>
+
+    <section class="section-stories" style="padding: 75px 0;">
+        <div class="bg-video">
+          <video class="bg-video__content" autoplay muted loop>
+            <source src="../static/css/images/video.mp4" type="video/mp4">
+            <source src="../static/css/images/video.webm" type="video/webm">
+              Your browser is not supported with videos!
+          </video>
+        </div>
+        <div class="u-center-text u-margin-bottom-medium">
+          <h2 class="heading-secondary">
+            Meet the wizards
+          </h2>
+        </div>
+
+        <div class="row">
+          <div class="story">
+            <figure class="story__shape">
+              <img class="story__img" src="../static/css/images/shrirang.jpeg" alt="Person on a tour">
+              <figcaption class="story__caption"> <!-- Used to  give caption to the figures -->
+                Shrirang Mhalgi
+              </figcaption>
+            </figure>
+            <div class="story__text">
+              <h3 class="heading-tertiary u-margin-bottom-small">
+                Shrirang Mhalgi: Masters in Computer Science
+              </h3>
+              <p>
+                I am Shrirang Mhalgi from Pune, Maharashtra, India. 
+                Back in India, I worked as an MDM developer with Persistent Systems. 
+                I am interested in gaining practical knowledge during the course of my Master's and applying the same to provide scalable solutions which can be deployed to make robust systems.
+              </p>
+              <br>
+              <b> 
+                Fun fact about me: I love data visualization and developing attractive user interfaces :P
+              </b>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="story">
+            <figure class="story__shape">
+              <img class="story__img" src="../static/css/images/manali1.jpeg" alt="Person on a tour">
+              <figcaption class="story__caption"> <!-- Used to  give caption to the figures -->
+                Manali Shelar
+              </figcaption>
+            </figure>
+            <div class="story__text">
+              <h3 class="heading-tertiary u-margin-bottom-small">
+                Manali Shelar: Masters in Data Science
+              </h3>
+              <p>
+                Manali Shelar here; I'm from Pune, Maharashtra, India. 
+                I was a consultant for Camgemini in India as an associate. 
+                In order to create engaging, data-driven solutions for the real world, I'm interested in learning about data science in practice.
+
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <div class="row" style="display: flex; align-items: center;">
+            <div class="col-1-of-2">
+                <div class="footer__navigation">
+                    <ul class="footer__list">
+                        <li class="footer__item"><a href="./about-us" class="footer__link js--scroll-to-live-updates">About us</a></li>
+                        <li class="footer__item"><a href="./eda" class="footer__link">EDA Dashboard</a></li>
+                        <li class="footer__item"><a href="./data-view" class="footer__link">Data View</a></li>
+                        <li class="footer__item"><a href="./" class="footer__link">Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-1-of-2">
+                <p class="footer__copyright">
+                    Developed by <a href="/about-us" class="footer__link">Shrirang Mhalgi and Manali Shelar</a> as part of <a href="#" class="footer__link">ADT Project</a>
+                    on 30<sup>th</sup> April 2023. Copyright &copy; Shrirang Mhalgi and Manali Shelar</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
