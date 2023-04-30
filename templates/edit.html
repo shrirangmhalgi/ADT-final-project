@@ -45,54 +45,69 @@
                 <form action="/update/{{college_details['id']}}" method="post">
                 <div class="col-md-5 offset-md-1">
                         <div class="card card-body" >
-                            
+
                               <div class="form-group" style="padding-bottom: 2rem;">
+                                <label for="college_name">College Name</label>
                                 <input type="text" class="form-control" name="college_name" value="{{college_details['college_name']}}">
                               </div>
                               <div class="form-group" style="padding-bottom: 2rem;">
+                                <label for="campus_size">Campus Size</label>
                                 <input type="text" class="form-control" name="campus_size" value="{{college_details['campus_size']}}">
                               </div>
                               <div class="form-group" style="padding-bottom: 2rem;">
-                                <input type="text" class="form-control" name="gender" value="{{college_details['gender_id']}}">
+                                <label for="gender">Gender</label>
+                                <input type="text" class="form-control" name="gender" value="{{college_details['gender']}}">
                               </div>
                               <div class="form-group" style="padding-bottom: 2rem;">
+                                <label for="total_student_enrollments">Total Student Enrollments</label>
                                 <input type="text" class="form-control" name="total_student_enrollments" value="{{college_details['total_student_enrollments']}}">
                               </div>
                               <div class="form-group" style="padding-bottom: 2rem;">
+                                <label for="total_faculty_count">Total Faculty Count</label>
                                 <input type="text" class="form-control" name="total_faculty_count" value="{{college_details['total_faculty_count']}}">
                               </div>
                               <div class="form-group" style="padding-bottom: 2rem;">
+                                <label for="established_year">Establised Year</label>
                                 <input type="text" class="form-control" name="established_year" value="{{college_details['established_year']}}">
                               </div>
                               <div class="form-group" style="padding-bottom: 2rem;">
+                                <label for="rating">Rating</label>
                                 <input type="text" class="form-control" name="rating" value="{{college_details['rating']}}">
                               </div>
                               <div class="form-group">
-                                <input type="text" class="form-control" name="university" value="{{college_details['university_id']}}">
+                                <label for="university">University</label>
+                                <input type="text" class="form-control" name="university" value="{{college_details['university']}}">
                               </div>
                           </div>
                           </div>
                           <div class="col-md-5 offset-right-md-1">
                             <div class="card card-body">
                                 <div class="form-group" style="padding-bottom: 2rem;">
+                                    <label for="courses">Courses Offered</label>
                                     <input type="text" class="form-control" name="courses" value="{{college_details['courses']}}">
                                   </div>
                                   <div class="form-group" style="padding-bottom: 2rem;">
+                                    <label for="facility_name">Facilities</label>
                                     <input type="text" class="form-control" name="facility_name" value="{{college_details['facilities']}}">
                                   </div>
                                   <div class="form-group" style="padding-bottom: 2rem;">
-                                    <input type="text" class="form-control" name="city" value="{{college_details['city_id']}}">
+                                    <label for="city">City</label>
+                                    <input type="text" class="form-control" name="city" value="{{college_details['city']}}">
                                   </div>
                                   <div class="form-group" style="padding-bottom: 2rem;">
-                                    <input type="text" class="form-control" name="state" value="{{college_details['state_id']}}">
+                                    <label for="state">State</label>
+                                    <input type="text" class="form-control" name="state" value="{{college_details['state']}}">
                                   </div>
                                   <div class="form-group" style="padding-bottom: 2rem;">
-                                    <input type="text" class="form-control" name="country" value="{{college_details['country_id']}}">
+                                    <label for="country">Country</label>
+                                    <input type="text" class="form-control" name="country" value="{{college_details['country_name']}}">
                                   </div>
                                   <div class="form-group" style="padding-bottom: 2rem;">
-                                    <input type="text" class="form-control" name="college_type" value="{{college_details['college_type_id']}}">
+                                    <label for="college_type">College Type</label>
+                                    <input type="text" class="form-control" name="college_type" value="{{college_details['college_type']}}">
                                   </div>
                                   <div class="form-group" style="padding-bottom: 2rem;">
+                                    <label for="average_fees">Average Fees</label>
                                     <input type="text" class="form-control" name="average_fees" value="{{college_details['average_fees']}}">
                                   </div>
             
